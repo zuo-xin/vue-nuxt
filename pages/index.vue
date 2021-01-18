@@ -44,6 +44,7 @@ export default {
 }
 
 .title {
+  display:flex;
   font-family:
     'Quicksand',
     'Source Sans Pro',
