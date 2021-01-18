@@ -7,7 +7,7 @@
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss">
 .basic-layout{
 	.header{
 		background: #f7f7f7;

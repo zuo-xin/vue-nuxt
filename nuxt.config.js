@@ -15,9 +15,12 @@ export default {
     port: 2021, // default: 3000
     host: "0.0.0.0" // default: localhost
   },
-
+  styleResources: {
+    scss: ['~/assets/scss/variable.scss']
+  },
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    '~assets/iconfont/iconfont.css','~assets/scss/reset.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -33,6 +36,7 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@nuxtjs/style-resources' 
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

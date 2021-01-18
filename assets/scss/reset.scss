@@ -1,0 +1,1244 @@
+@charset "utf-8";
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("~assets/font/opensans.woff2");
+    src: local("Open Sans"), local("OpenSans"),
+        url("~assets/font/opensans.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local("Open Sans Light"), local("OpenSans-Light"),
+        url("~assets/font/opensans-light-webfont.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local("opensans semibold webfont"), local("opensans-semibold-webfont"),
+        url("~assets/font/opensans-semibold-webfont.woff2") format("woff2");
+    font-display: swap;
+}
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+button,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+input,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+select,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+textarea,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    -webkit-appearance: none;
+    border: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    -webkit-text-size-adjust: none;
+}
+
+body,
+html {
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    touch-action:manipulation;
+}
+
+.html_gray {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+    content: "";
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+[hidden] {
+    display: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+    outline: none;
+    -webkit-appearance: none;
+    border: none;
+    background: none;
+}
+
+button,
+input {
+    line-height: normal;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+input,
+select,
+textarea {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0070bc;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.fixScroll {
+    position: fixed;
+    width: 100%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:active,
+textarea:-webkit-autofill:focus,
+textarea:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+textarea:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+textarea:focus:-moz-placeholder {
+    color: transparent;
+}
+textarea:focus::-moz-placeholder {
+    color: transparent;
+}
+textarea:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $borderColor2;
+    border-radius: 2px;
+    padding: 10px;
+    line-height: 18px;
+    transition: all 0.3s;
+    color: $textColor1;
+    &:focus {
+        border: 1px solid #8d8d8f;
+    }
+}
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: none;
+    padding: 0;
+    line-height: 1;
+    background: none;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    &:before {
+        content: "\f043";
+        color: #8d8d8f;
+        font-family: "iconfont" !important;
+        -webkit-font-smoothing: antialiased;
+        cursor: pointer;
+    }
+    &:checked {
+        &:before {
+            color: #4c4948;
+            font-family: "iconfont" !important;
+            -webkit-font-smoothing: antialiased;
+            content: "\f042";
+        }
+    }
+    &:disabled {
+        &:before {
+            color: #ccc;
+        }
+    }
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: none;
+    padding: 0;
+    line-height: 1;
+    background: none;
+    background-color: transparent;
+    outline: none;
+    position: relative;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    &:before {
+        content: "\f051";
+
+        color: #ccc;
+        font-family: "iconfont" !important;
+        -webkit-font-smoothing: antialiased;
+        cursor: pointer;
+    }
+    &:checked {
+        &:before {
+            color: #4b4b4d;
+            font-family: "iconfont" !important;
+            -webkit-font-smoothing: antialiased;
+            content: "\f050";
+        }
+    }
+    &:disabled {
+        &:before {
+            color: #ccc;
+            opacity: 0.8;
+        }
+    }
+}
+
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    border: 1px solid $borderColor2;
+    border-radius: 2px;
+    padding: 0 10px;
+    background-image: url("https://images.weserv.nl/?url=img-en.fs.com/includes/templates/fiberstore/images/fs-new/drop-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px top 15px;
+    background-size: 14px 8px;
+}
+
+textarea {
+    display: block;
+    height: 100px;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid $borderColor2;
+    transition: all 0.3s;
+    color: $textColor1;
+    font-size: 13px;
+    padding: 6px 10px;
+    resize: none;
+    &:focus {
+        border: 1px solid #8d8d8f;
+    }
+}
+
+.clear-after:after {
+    content: " ";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+    transform: translate3d(100%, 0, 0);
+}
+.slide-up-enter,
+.slide-up-leave-to {
+    transform: translate3d(0, 100%, 0);
+}
+
+// 国旗icon
+
+.country-code {
+    display: inline-block;
+    background-image: url(https://img-en.fs.com/includes/templates/fiberstore/images/country.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    &.country-af {
+        background-position: 0 0;
+    }
+
+    &.country-al {
+        background-position: -60px 0;
+    }
+
+    &.country-dz {
+        background-position: -100px 0;
+    }
+    &.country-as {
+        background-position: -120px 0;
+    }
+    &.country-ad {
+        background-position: -140px 0;
+    }
+    &.country-ao {
+        background-position: -160px 0;
+    }
+    &.country-ai {
+        background-position: -180px 0;
+    }
+    &.country-aq {
+        background-position: -200px 0;
+    }
+    &.country-ag {
+        background-position: -220px 0;
+    }
+
+    &.country-ar {
+        background-position: -260px 0;
+    }
+    &.country-am {
+        background-position: -280px 0;
+    }
+    &.country-aw {
+        background-position: -300px 0;
+    }
+
+    &.country-au,
+    &.country-hm {
+        background-position: -340px 0;
+    }
+    &.country-at {
+        background-position: -360px 0;
+    }
+    &.country-az {
+        background-position: -380px 0;
+    }
+    &.country-bs {
+        background-position: -400px 0;
+    }
+    &.country-bh {
+        background-position: -420px 0;
+    }
+    &.country-bd {
+        background-position: -440px 0;
+    }
+    &.country-bb {
+        background-position: -460px 0;
+    }
+
+    &.country-by {
+        background-position: 0 -20px;
+    }
+    &.country-be {
+        background-position: -20px -20px;
+    }
+    &.country-bz {
+        background-position: -40px -20px;
+    }
+    &.country-bj {
+        background-position: -60px -20px;
+    }
+    &.country-bm {
+        background-position: -80px -20px;
+    }
+    &.country-bt {
+        background-position: -100px -20px;
+    }
+    &.country-bo {
+        background-position: -120px -20px;
+    }
+    &.country-ba {
+        background-position: -140px -20px;
+    }
+    &.country-bw {
+        background-position: -160px -20px;
+    }
+
+    &.country-br {
+        background-position: -200px -20px;
+    }
+    &.country-io {
+        background-position: -220px -20px;
+    }
+    &.country-bn {
+        background-position: -240px -20px;
+    }
+    &.country-bg {
+        background-position: -260px -20px;
+    }
+    &.country-bf {
+        background-position: -280px -20px;
+    }
+    &.country-bi {
+        background-position: -300px -20px;
+    }
+    &.country-kh {
+        background-position: -320px -20px;
+    }
+    &.country-cm {
+        background-position: -340px -20px;
+    }
+    &.country-ca {
+        background-position: -360px -20px;
+    }
+    &.country-cv {
+        background-position: -380px -20px;
+    }
+
+    &.country-ky {
+        background-position: -440px -20px;
+    }
+    &.country-cf {
+        background-position: -460px -20px;
+    }
+    &.country-td {
+        background-position: -480px -20px;
+    }
+    &.country-cl {
+        background-position: 0 -40px;
+    }
+    &.country-cn {
+        background-position: -20px -40px;
+    }
+    &.country-cx {
+        background-position: -40px -40px;
+    }
+
+    &.country-cc {
+        background-position: -80px -40px;
+    }
+    &.country-co {
+        background-position: -100px -40px;
+    }
+
+    &.country-km {
+        background-position: -140px -40px;
+    }
+    &.country-cg {
+        background-position: -160px -40px;
+    }
+
+    &.country-ck {
+        background-position: -200px -40px;
+    }
+    &.country-cr {
+        background-position: -220px -40px;
+    }
+    &.country-ci {
+        background-position: -240px -40px;
+    }
+    &.country-hr {
+        background-position: -260px -40px;
+    }
+    &.country-cu {
+        background-position: -280px -40px;
+    }
+
+    &.country-cy {
+        background-position: -320px -40px;
+    }
+    &.country-cz {
+        background-position: -340px -40px;
+    }
+    &.country-dk {
+        background-position: -360px -40px;
+    }
+    &.country-dj {
+        background-position: -380px -40px;
+    }
+    &.country-dm {
+        background-position: -400px -40px;
+    }
+    &.country-do {
+        background-position: -420px -40px;
+    }
+    &.country-ec {
+        background-position: -440px -40px;
+    }
+    &.country-eg {
+        background-position: -460px -40px;
+    }
+    &.country-sv {
+        background-position: -480px -40px;
+    }
+
+    &.country-gq {
+        background-position: -20px -60px;
+    }
+    &.country-er {
+        background-position: -40px -60px;
+    }
+    &.country-ee {
+        background-position: -60px -60px;
+    }
+    &.country-et {
+        background-position: -80px -60px;
+    }
+    &.country-eu {
+        background-position: -100px -60px;
+    }
+    &.country-fk {
+        background-position: -120px -60px;
+    }
+
+    &.country-fj {
+        background-position: -180px -60px;
+    }
+    &.country-fi,
+    &.country-ax {
+        background-position: -200px -60px;
+    }
+    &.country-fr {
+        background-position: -220px -60px;
+    }
+    &.country-tf {
+        background-position: -240px -60px;
+    }
+    &.country-gf {
+        background-position: -260px -60px;
+    }
+    &.country-ga {
+        background-position: -280px -60px;
+    }
+
+    &.country-gm {
+        background-position: -320px -60px;
+    }
+    &.country-ge {
+        background-position: -340px -60px;
+    }
+    &.country-de {
+        background-position: -360px -60px;
+    }
+    &.country-gh {
+        background-position: -380px -60px;
+    }
+    &.country-gi {
+        background-position: -400px -60px;
+    }
+    &.country-gr {
+        background-position: -420px -60px;
+    }
+    &.country-gl {
+        background-position: -440px -60px;
+    }
+    &.country-gd {
+        background-position: -460px -60px;
+    }
+
+    &.country-gt {
+        background-position: 0 -80px;
+    }
+    &.country-gu {
+        background-position: -20px -80px;
+    }
+    &.country-gg {
+        background-position: -40px -80px;
+    }
+    &.country-gn {
+        background-position: -60px -80px;
+    }
+    &.country-gw {
+        background-position: -80px -80px;
+    }
+    &.country-gy {
+        background-position: -100px -80px;
+    }
+    &.country-ht {
+        background-position: -120px -80px;
+    }
+
+    &.country-hn {
+        background-position: -160px -80px;
+    }
+    &.country-hk {
+        background-position: -180px -80px;
+    }
+    &.country-hu {
+        background-position: -200px -80px;
+    }
+
+    &.country-is {
+        background-position: -240px -80px;
+    }
+
+    &.country-in {
+        background-position: -280px -80px;
+    }
+    &.country-id {
+        background-position: -300px -80px;
+    }
+    &.country-ir {
+        background-position: -320px -80px;
+    }
+    &.country-iq {
+        background-position: -340px -80px;
+    }
+    &.country-ie {
+        background-position: -360px -80px;
+    }
+
+    &.country-il {
+        background-position: -420px -80px;
+    }
+    &.country-it {
+        background-position: -440px -80px;
+    }
+    &.country-jm {
+        background-position: -460px -80px;
+    }
+    &.country-jp {
+        background-position: -480px -80px;
+    }
+    &.country-je {
+        background-position: 0 -100px;
+    }
+    &.country-jo {
+        background-position: -20px -100px;
+    }
+    &.country-kz {
+        background-position: -40px -100px;
+    }
+    &.country-ke {
+        background-position: -60px -100px;
+    }
+    &.country-ki {
+        background-position: -80px -100px;
+    }
+
+    &.country-kw {
+        background-position: -120px -100px;
+    }
+    &.country-kg {
+        background-position: -140px -100px;
+    }
+
+    &.country-lv {
+        background-position: -180px -100px;
+    }
+    &.country-lb {
+        background-position: -200px -100px;
+    }
+    &.country-ls {
+        background-position: -220px -100px;
+    }
+    &.country-lr {
+        background-position: -240px -100px;
+    }
+
+    &.country-li {
+        background-position: -280px -100px;
+    }
+    &.country-lt {
+        background-position: -300px -100px;
+    }
+    &.country-lu {
+        background-position: -320px -100px;
+    }
+
+    &.country-mk {
+        background-position: -360px -100px;
+    }
+    &.country-mg {
+        background-position: -380px -100px;
+    }
+    &.country-mw {
+        background-position: -400px -100px;
+    }
+    &.country-my {
+        background-position: -420px -100px;
+    }
+    &.country-mv {
+        background-position: -440px -100px;
+    }
+    &.country-ml {
+        background-position: -460px -100px;
+    }
+    &.country-mt {
+        background-position: -480px -100px;
+    }
+    &.country-mh {
+        background-position: 0 -120px;
+    }
+    &.country-mq {
+        background-position: -20px -120px;
+    }
+    &.country-mr {
+        background-position: -40px -120px;
+    }
+    &.country-mu {
+        background-position: -60px -120px;
+    }
+    &.country-yt {
+        background-position: -80px -120px;
+    }
+    &.country-mx {
+        background-position: -100px -120px;
+    }
+    &.country-fm {
+        background-position: -120px -120px;
+    }
+    &.country-md {
+        background-position: -140px -120px;
+    }
+    &.country-mc {
+        background-position: -160px -120px;
+    }
+    &.country-mn {
+        background-position: -180px -120px;
+    }
+    &.country-me {
+        background-position: -200px -120px;
+    }
+    &.country-ms {
+        background-position: -220px -120px;
+    }
+    &.country-ma {
+        background-position: -240px -120px;
+    }
+    &.country-mz {
+        background-position: -260px -120px;
+    }
+    &.country-mm {
+        background-position: -280px -120px;
+    }
+    &.country-na {
+        background-position: -300px -120px;
+    }
+
+    &.country-nr {
+        background-position: -340px -120px;
+    }
+    &.country-np {
+        background-position: -360px -120px;
+    }
+    &.country-an {
+        background-position: -380px -120px;
+    }
+    &.country-nl {
+        background-position: -400px -120px;
+    }
+
+    &.country-nz {
+        background-position: -440px -120px;
+    }
+    &.country-ni {
+        background-position: -460px -120px;
+    }
+    &.country-ne {
+        background-position: -480px -120px;
+    }
+    &.country-ng {
+        background-position: 0 -140px;
+    }
+    &.country-nu {
+        background-position: -20px -140px;
+    }
+    &.country-nf {
+        background-position: -40px -140px;
+    }
+
+    &.country-mp {
+        background-position: -120px -140px;
+    }
+    &.country-no,
+    &.country-bv {
+        background-position: -140px -140px;
+    }
+
+    &.country-om {
+        background-position: -220px -140px;
+    }
+
+    &.country-pk {
+        background-position: -260px -140px;
+    }
+    &.country-pw {
+        background-position: -280px -140px;
+    }
+    &.country-ps {
+        background-position: -300px -140px;
+    }
+    &.country-pa {
+        background-position: -320px -140px;
+    }
+    &.country-pg {
+        background-position: -340px -140px;
+    }
+    &.country-py {
+        background-position: -360px -140px;
+    }
+    &.country-pe {
+        background-position: -380px -140px;
+    }
+    &.country-ph {
+        background-position: -400px -140px;
+    }
+    &.country-pn {
+        background-position: -420px -140px;
+    }
+    &.country-pl {
+        background-position: -440px -140px;
+    }
+    &.country-pt {
+        background-position: -460px -140px;
+    }
+    &.country-pr {
+        background-position: -480px -140px;
+    }
+    &.country-qa {
+        background-position: 0 -160px;
+    }
+
+    &.country-ro {
+        background-position: -60px -160px;
+    }
+    &.country-ru {
+        background-position: -80px -160px;
+    }
+    &.country-rw {
+        background-position: -100px -160px;
+    }
+
+    &.country-lc {
+        background-position: -160px -160px;
+    }
+
+    &.country-ws {
+        background-position: -220px -160px;
+    }
+    &.country-sm {
+        background-position: -240px -160px;
+    }
+    &.country-st {
+        background-position: -260px -160px;
+    }
+    &.country-sa {
+        background-position: -280px -160px;
+    }
+
+    &.country-sn {
+        background-position: -320px -160px;
+    }
+    &.country-rs {
+        background-position: -340px -160px;
+    }
+    &.country-sc {
+        background-position: -360px -160px;
+    }
+    &.country-sl {
+        background-position: -380px -160px;
+    }
+    &.country-sg {
+        background-position: -400px -160px;
+    }
+
+    &.country-sk {
+        background-position: -440px -160px;
+    }
+    &.country-si {
+        background-position: -460px -160px;
+    }
+    &.country-sb {
+        background-position: -480px -160px;
+    }
+    &.country-so {
+        background-position: 0 -180px;
+    }
+    &.country-xs {
+        background-position: -20px -180px;
+    }
+    &.country-za {
+        background-position: -40px -180px;
+    }
+
+    &.country-kp {
+        background-position: -80px -180px;
+    }
+
+    &.country-es {
+        background-position: -120px -180px;
+    }
+    &.country-lk {
+        background-position: -140px -180px;
+    }
+    &.country-kn {
+        background-position: -160px -180px;
+    }
+    &.country-vc {
+        background-position: -180px -180px;
+    }
+    &.country-sd {
+        background-position: -200px -180px;
+    }
+    &.country-sr {
+        background-position: -220px -180px;
+    }
+    &.country-sj {
+        background-position: -240px -180px;
+    }
+    &.country-sz {
+        background-position: -260px -180px;
+    }
+    &.country-se {
+        background-position: -280px -180px;
+    }
+    &.country-ch {
+        background-position: -300px -180px;
+    }
+    &.country-sy {
+        background-position: -320px -180px;
+    }
+
+    &.country-tw {
+        background-position: -360px -180px;
+    }
+    &.country-tj {
+        background-position: -380px -180px;
+    }
+    &.country-tz {
+        background-position: -400px -180px;
+    }
+    &.country-th {
+        background-position: -420px -180px;
+    }
+    &.country-tl {
+        background-position: -440px -180px;
+    }
+    &.country-tg {
+        background-position: -460px -180px;
+    }
+    &.country-tk {
+        background-position: -480px -180px;
+    }
+    &.country-to {
+        background-position: 0 -200px;
+    }
+    &.country-tt {
+        background-position: -20px -200px;
+    }
+
+    &.country-tn {
+        background-position: -60px -200px;
+    }
+    &.country-tr {
+        background-position: -80px -200px;
+    }
+    &.country-tm {
+        background-position: -100px -200px;
+    }
+    &.country-tc {
+        background-position: -120px -200px;
+    }
+    &.country-tv {
+        background-position: -140px -200px;
+    }
+    &.country-ug {
+        background-position: -160px -200px;
+    }
+    &.country-ua {
+        background-position: -180px -200px;
+    }
+
+    &.country-ae {
+        background-position: -240px -200px;
+    }
+    &.country-uk,
+    &.country-gb,
+    &.country-gs,
+    &.country-im {
+        background-position: -260px -200px;
+    }
+
+    &.country-us,
+    &.country-um {
+        background-position: -320px -199px;
+    }
+    &.country-uy {
+        background-position: -340px -200px;
+    }
+    &.country-uz {
+        background-position: -360px -200px;
+    }
+    &.country-vu {
+        background-position: -380px -200px;
+    }
+    &.country-va {
+        background-position: -400px -200px;
+    }
+    &.country-ve {
+        background-position: -420px -200px;
+    }
+    &.country-vn {
+        background-position: -440px -200px;
+    }
+    &.country-vg {
+        background-position: -460px -200px;
+    }
+    &.country-vi {
+        background-position: -480px -200px;
+    }
+
+    &.country-eh {
+        background-position: -40px -220px;
+    }
+
+    &.country-ye {
+        background-position: -100px -220px;
+    }
+    &.country-zm {
+        background-position: -120px -220px;
+    }
+    &.country-zw {
+        background-position: -140px -220px;
+    }
+    &.country-tp {
+        background-position: -160px -220px;
+    }
+    &.country-fo {
+        background-position: -180px -220px;
+    }
+    &.country-gp {
+        background-position: -200px -220px;
+    }
+    &.country-kr {
+        background-position: -220px -220px;
+    }
+    &.country-la {
+        background-position: -240px -220px;
+    }
+    &.country-ly {
+        background-position: -260px -220px;
+    }
+    &.country-mo {
+        background-position: -280px -220px;
+    }
+    &.country-ic {
+        background-position: -320px -220px;
+    }
+    &.country-cd {
+        background-position: -340px -220px;
+    }
+    &.country-xy {
+        background-position: -360px -220px;
+    }
+    &.country-pf {
+        background-position: -380px -220px;
+    }
+    &.country-sh {
+        background-position: -400px -220px;
+    }
+    &.country-re {
+        background-position: -220px -60px;
+    }
+    &.country-pm {
+        background-position: -220px -60px;
+    }
+    &.country-wf {
+        background-position: -220px -60px;
+    }
+    &.country-nc {
+        background-position: -220px -60px;
+    }
+}
