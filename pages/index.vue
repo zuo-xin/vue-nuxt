@@ -2,7 +2,7 @@
 	<div class="container">
 		<div>
 			<Logo />
-      <NuxtLink to="/list" >to list</NuxtLink>
+			<NuxtLink to="/list">to list</NuxtLink>
 			<h1 class="title">
 				Networking
 			</h1>
@@ -25,31 +25,55 @@
 			</li>
 		</ul>
 
-    <button type="button" @click.stop="click" class="login">click to login</button>
+		<!-- <div>{{list}}</div> -->
+
+		<button type="button" @click.stop="click" class="login">click to login</button>
 	</div>
 </template>
 
 <script>
 
 
-import axios from 'axios'
+//import axios from 'axios'
 
 export default {
 	layout: 'BasicLayout',
-	async asyncData () {
-		const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
-		return { users: data }
-  },
-  mounted(){
-    console.log(process)
-    console.log(process.client)
-  },
-  methods:{
-    click(){
-      let routeData = this.$router.resolve({name: 'account-login'});
-      window.open(routeData.href, '_blank');
-    }
-  }
+	data () {
+		return {
+			users: []
+		}
+	},
+	asyncData ({ $axios }) {
+
+		// return $axios.post("/api/index/getIndexDataNew", { type: 8 }).then(res => {
+		// 	let list = res.data.data;
+
+		// 	return { list: list }
+
+		// }).catch((err) => {
+
+		// })
+	},
+	mounted () {
+		// console.log(process)
+		// console.log(process.client)
+
+		this.$axios.post("/api/index/getIndexDataNew", { type: 290 }).then(res => {
+			console.log(res.data[0].title)
+			//this.showSpringFestival();
+		}).catch((err) => {
+			//this.show_data  = this.show_data + 1
+
+			//this.showSpringFestival();
+		})
+
+	},
+	methods: {
+		click () {
+			let routeData = this.$router.resolve({ name: 'account-login' });
+			window.open(routeData.href, '_blank');
+		}
+	}
 }
 </script>
 
@@ -57,8 +81,11 @@ export default {
 .title {
 	color: $btnBgColor1;
 }
-.login{
-  color: blue;
-  cursor: pointer;
+.login {
+	color: blue;
+	cursor: pointer;
+}
+
+li {
 }
 </style>

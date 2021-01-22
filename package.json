@@ -9,13 +9,17 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.12.5",
     "@nuxtjs/component-cache": "^1.1.6",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6"
   },
   "devDependencies": {
+    "@nuxtjs/proxy": "^2.1.0",
     "@nuxtjs/style-resources": "^1.0.0",
+    "js-md5": "^0.7.3",
+    "js-sha1": "^0.6.0",
     "sass": "^1.32.4",
     "sass-loader": "^10.1.1"
   },
