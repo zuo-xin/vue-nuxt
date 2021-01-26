@@ -32,10 +32,6 @@
 </template>
 
 <script>
-
-
-//import axios from 'axios'
-
 export default {
 	layout: 'BasicLayout',
 	data () {
@@ -43,15 +39,13 @@ export default {
 			users: []
 		}
 	},
-	asyncData ({ $axios }) {
-
+	asyncData ({app, $axios }) {
+		//console.log(app)
+		app.$cookies.set('token','hello-world')
 		// return $axios.post("/api/index/getIndexDataNew", { type: 8 }).then(res => {
 		// 	let list = res.data.data;
-
 		// 	return { list: list }
-
 		// }).catch((err) => {
-
 		// })
 	},
 	mounted () {

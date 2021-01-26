@@ -11,7 +11,7 @@ export default {
   },
   loading: false,
   server: {
-    port: 2021, // default: 3000
+    port: 3000, // default: 3000
     host: "0.0.0.0" // default: localhost
   },
   
@@ -33,7 +33,8 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/component-cache',
     '@nuxtjs/proxy',
-    '@nuxtjs/axios'
+	'@nuxtjs/axios',
+	'cookie-universal-nuxt'
   ],
 
   axios: {
