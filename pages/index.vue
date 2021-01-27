@@ -2,7 +2,7 @@
 	<div class="container">
 		<div>
 			<Logo />
-			<NuxtLink to="/list">to list</NuxtLink>
+			<NuxtLink to="/list.html">to list</NuxtLink>
 			<h1 class="title">
 				Networking
 			</h1>
@@ -57,7 +57,6 @@ export default {
 			//this.showSpringFestival();
 		}).catch((err) => {
 			//this.show_data  = this.show_data + 1
-
 			//this.showSpringFestival();
 		})
 
@@ -75,11 +74,10 @@ export default {
 .title {
 	color: $btnBgColor1;
 }
+
 .login {
 	color: blue;
 	cursor: pointer;
 }
 
-li {
-}
 </style>
