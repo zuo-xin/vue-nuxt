@@ -69,7 +69,7 @@ export default function({ app,$axios, redirect, route }) {
     config.headers.timeStamp = timeStamp;
     config.headers.randomStr = randomStr;
     config.headers.signature = signature;
-    console.log(config)
+    //console.log(config)
     return config;
   });
 

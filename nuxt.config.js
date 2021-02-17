@@ -1,41 +1,38 @@
+import router from "./router";
+import i18n from "./config/i18n.js";
+
 export default {
-  // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: "vue-nuxt",
+    //title: "vue-nuxt",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+	  {"http-equiv":"X-UA-Compatible",content:"IE=edge"},
+      { name: "viewport", content: "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+		{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      	{ rel: "shortcut icon", href: "/favicon.ico" },
+      	{ rel: "apple-touch-icon", href: "/favicon.ico" }
+	]
   },
   loading: false,
   server: {
     port: 3000, // default: 3000
     host: "0.0.0.0" // default: localhost
   },
-
-  // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ["~assets/iconfont/iconfont.css", "~assets/scss/reset.scss"],
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ["~/plugins/axios.js"],
-
-  // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
-
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [],
-
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     "@nuxtjs/style-resources",
     "@nuxtjs/component-cache",
     "@nuxtjs/proxy",
     "@nuxtjs/axios",
-    "cookie-universal-nuxt"
+    "cookie-universal-nuxt",
+    ["nuxt-i18n", i18n]
   ],
-
+  router,
   axios: {
     proxy: true
   },
@@ -48,10 +45,7 @@ export default {
   styleResources: {
     scss: ["~/assets/scss/variable.scss"]
   },
-
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-	analyze: true,
-    extractCSS: true,
+    extractCSS: true
   }
 };

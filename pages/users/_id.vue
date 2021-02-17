@@ -35,5 +35,7 @@ export default {
   margin-top: 100px;
   font-family: sans-serif;
   height: 1000px;
+  width:100px;
+  color: #c00000;
 }
 </style>
